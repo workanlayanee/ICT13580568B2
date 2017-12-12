@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ICT13580568B2.ProductNewPage"
+    Title="New Product">
+    <ScrollView
+        >
+        <StackLayout
+            Orientation="Vertical"
+            BackgroundColor="Olive"
+        >
+            <Label
+            x:Name="titleLabel"
+            VerticalOptions="Center"
+            Text="Add product"
+            HorizontalTextAlignment="Center"
+            HeightRequest="30"
+            BackgroundColor="White"/>
+            
+            <StackLayout
+            Orientation="Vertical"
+            BackgroundColor="Olive"
+                Padding="20"
+        >
+            <Label
+                Text="ชื่อสินค้า"
+                FontSize="16" />
+            <Entry
+                Placeholder="ชื่อสินค้า"
+                x:Name="nameProduct" />
+            <Label
+                Text="รายละเอียด"
+                FontSize="16" />
+            <Editor
+                HeightRequest="80"
+                x:Name="detillProduct" />
+            <Label
+                Text="หมวดสินค้า"
+                FontSize="16" />
+            <Picker
+                Title="กรุณาเลือกสินค้า"
+                x:Name="catgoryProduct" />
+            <Label
+                Text="ราคาสินค้า"
+                FontSize="16" />
+            <Entry
+                Placeholder="0.00"
+                x:Name="costProduct" />
+            <Label
+                Text="ราคาขาย"
+                FontSize="16" />
+            <Entry
+                Placeholder="0.00"
+                x:Name="priceProduct" />
+            <Label
+                Text="จำนวนสินค้า"
+                FontSize="16" />
+            <Entry
+                Placeholder="0.00"
+                x:Name="numberProduct" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Button
+                    Text="ยกเลิก"
+                    TextColor="White"
+                    BackgroundColor="Red"
+                    x:Name="cancelProduct" />
+                <Button
+                    Text="บันทึก"
+                    TextColor="White"
+                    BackgroundColor="Green"
+                    x:Name="addProduct"
+                    Grid.Column="1" />
+            </Grid>
+        </StackLayout>
+             </StackLayout>
+    </ScrollView>
+</ContentPage>
